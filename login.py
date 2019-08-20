@@ -4,6 +4,9 @@ from pymongo import MongoClient
 from getpass import getpass
 import dbconfig
 
+"""
+TODO: Need to import argparse and do the arguments things my dudes.
+"""
 
 username = urllib.parse.quote_plus(dbconfig.db['username'])
 password = urllib.parse.quote_plus(dbconfig.db['password'])
@@ -36,22 +39,7 @@ def user_lookup():
         for result in results:
             print(result)
     else:
-        print("User NOT found!")
-
-
-
-
- # def show_credentials():
- #     login = input("What is your username? ")
- #     if login in users:
- #         password = users.get(login)
- #         print(password)
-
-#new_user()
-
-#show_credentials()
+        print("User NOT found")
 
 new_user()
-
-#user_lookup()
 
